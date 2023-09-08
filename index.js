@@ -22,7 +22,7 @@
     'use strict';
 
     // global variables
-    const debug = true;
+    const debug = false;
     const lang = navigator.language || navigator.userLanguage; // e.g. "en-US"
 
     // Language pack
