@@ -29,7 +29,10 @@ Audio material page of card mode
 
 ## Change Logs
 
-### v0.0.1 (2023/09/08)
+### v1.0.1 (2023/11/14)
+- fixed can not get material id issue
+
+### v1.0.0 (2023/09/08)
 - added copy id btn on material list
 
 <br>
@@ -56,7 +59,10 @@ Audio material page of card mode
 
 ## 更新历史
 
-### v0.0.1（2023/09/08）
+### v1.0.1 (2023/11/14)
+- 修复 无法获取素材ID的问题
+
+### v1.0.0（2023/09/08）
 - 新增 复制素材ID按钮
 
 <br>
@@ -83,4 +89,6 @@ Audio material page of card mode
 
 ## يېڭىلاش تارىخى
 
-### نەشر 0.0.1 (2023/09/08)
+### نەشر 1.0.1 (2023/11/14)
+
+### نەشر 1.0.0 (2023/09/08)
