@@ -3,7 +3,7 @@
 // @name:zh-CN          网盘助手
 // @name:ug             تور دىسكا ياردەمچىسى
 // @namespace           https://github.com/ShererInc/NetDiskHelper
-// @version             1.0.0
+// @version             1.0.1
 // @author              Sherer(شەرەر)
 // @description         Easy to get material ids in net disk of Tianyi(189)
 // @description:zh-CN   一键获取天翼云盘（189）素材ID
@@ -136,7 +136,8 @@
 
     // Analysis net disks
     if (/cloud.189.cn/.test(location.host)) {
-        new MutationObserver(function (mutationsList, observer) {
+        let observe = new MutationObserver(function (mutationsList, observer) {
+            debug && console.log(mutationsList);
             let doWork = true;
             for (let i = 0; i < mutationsList.length; i++) {
                 let mutation = mutationsList[i];
@@ -153,7 +154,11 @@
                 }
             }
             doWork && tianyi();
-        }).observe(document.getElementsByClassName("c-file-list").item(0), { attributes: false, childList: true, subtree: true });
+        });
+
+        let nodes = document.getElementsByClassName("p-view-box");
+        debug && console.log(nodes);
+        if (nodes && nodes.length) observe.observe(nodes.item(0), { attributes: false, childList: true, subtree: true });
         tianyi();
     }
 
